@@ -1,0 +1,531 @@
+@charset "UTF-8";
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+   
+    overflow-x: hidden;
+    
+}
+
+/* Container Styles */
+.container {
+    width: 97%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Header Styles */
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #000e22 , #112c53, #5f2975 ,#140236);
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items horizontally */
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    margin-bottom: 10px; /* Space between logo and navigation */
+}
+
+header .logo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 15px; /* Space between logo and title */
+}
+
+header h1 {
+    font-size: 1.8em; /* Adjust size as needed */
+    margin: 0; /* Remove default margin */
+}
+
+header nav {
+    display: flex;
+    justify-content: center; /* Center navigation items horizontally */
+    width: 100%;
+}
+
+header ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+header li {
+    display: inline;
+    padding: 0 15px; /* Adjust padding as needed for spacing */
+}
+
+header .hbtn {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+header .hbtn:hover {
+        color: #ffcc00;
+}
+
+/* Sidebar Styles */
+.container2 {
+    display: flex;
+    
+}
+
+.sidebar {
+    width: 250px;
+      background: rgba(255, 255, 255, 0.2); /* Light transparent background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    backdrop-filter: blur(10px); /* Blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Blur effect for Safari */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border *//* Text color */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sidebar a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    margin: 10px 0;
+    
+    
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+/* General button styles */
+.button-with-icon {
+    position: relative;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background: linear-gradient(135deg, #000e22 , #112c53, #5f2975 ,#140236);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* Sparkle effect */
+.button-with-icon:hover:before,
+.button-with-icon:hover:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+.button-with-icon::before {
+    background-image: radial-gradient(circle, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 70%);
+    animation: sparkle 2s infinite;
+}
+
+.btn-sparkle::after {
+    background-image: linear-gradient(45deg, rgba(255,255,255,0.3) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0.3) 75%, transparent 75%, transparent);
+    background-size: 1.5em 1.5em;
+    animation: shine 2s infinite linear;
+}
+
+/* Keyframes for sparkle effect */
+@keyframes sparkle {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}
+
+@keyframes shine {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 3em 3em;
+    }
+}
+
+
+/* Main Content Styles */
+.main-content {
+    flex-grow: 1;
+    padding: 15px;
+    box-sizing: border-box;
+    background-image: url('https://img.freepik.com/free-photo/stack-books-with-glasses-wooden-desk_1134-17.jpg?w=996&t=st=1722847038~exp=1722847638~hmac=ca284e05676aa228d6e968dddafe47bcd555a00edcffaa69c86a649ccc99e617');
+    
+    background-size: cover;
+}
+
+.new-arrivals h2, .featured-books h2 {
+    border-bottom: 2px solid #060606;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.carousel-inner {
+    display: flex;
+    width: calc(200%);
+    animation: scroll 20s linear infinite;
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    margin: 0 10px;
+}
+
+.carousel-item img {
+    width: 150px;
+    height: 100px;
+    border: 3px solid black;
+    padding: 20px;
+    background-color: wheat;
+}
+
+/* Keyframes for continuous scrolling */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #0b0b0b;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+    background-color: #9a9a98;
+    color: #333;
+}
+
+footer {
+    background: linear-gradient(135deg, #000e22 , #112c53, #5f2975 ,#140236);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 5px;
+}
+
+footer .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .social-media a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+footer .social-media a:hover {
+    color: #9f9e9b;
+    text-decoration: underline;
+}
+
+footer .contact {
+    margin-top: 10px;
+}
+
+footer .contact p {
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .new-arrivals, .featured-books {
+        padding: 20px;
+    }
+
+    footer .social-media a {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+/* book information table*/
+
+ table {
+        width: 100%;
+        border-collapse: collapse;
+        display:flex;
+        justify-content: center;
+        
+        
+      
+        			
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px 15px 8px 15px;
+        width: auto;
+        background-color: white;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    h1,td{
+    
+    text-align: center;
+    
+    }
+    h1{
+    color:white;
+    text-shadow: 2px 2px 5px blue;
+    }
+    
+  /*   book issue form */
+.formbody {
+    font-family: Arial, sans-serif;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    
+} 
+
+/* Form Styles */
+.issueform {
+  
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    display:flex;
+    background: rgba(255, 255, 255, 0.2); /* Light transparent background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    backdrop-filter: blur(10px); /* Blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Blur effect for Safari */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
+     /* Text color */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Input Styles */
+.issueforminputs {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 5px gray;;
+    box-sizing: border-box;
+}
+
+/* Message Styles */
+.message {
+    font-size: 14px;
+    color:orange;
+    margin-bottom: 20px;
+}
+
+/* Button Styles */
+.issueformbtn {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background: #0a9f50;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    
+}
+.info-container {
+    margin-bottom: 20px;
+    color:white;
+}
+
+/* Error Message Styles */
+.error-message {
+    color: #d9534f; /* Red color for error messages */
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Link Styles */
+.available-books-link {
+    color:white; /* Bootstrap blue */
+    text-decoration: underline;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.issueformbtn:hover {
+    background: #022bb0;
+}
+.bookissueheader{
+    text-shadow: 2px 2px 3px green;
+    font-weight: 30px;
+}
+   
+ 
+.scrollbody {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;			
+            margin-right:10%;
+            width: auto;
+            
+        }
+        .section-container {
+        	min-width: 300px;
+            position: relative;
+            width: 70%;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.15); 
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.3); 
+            border-radius: 10px;
+            padding: 20px; /* Reduced padding */
+             /* Reduced margin-bottom */
+             margin:10px;
+             
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 10px; /* Reduced margin-bottom */
+            font-size: 24px;
+            color:black;
+            margin-top: 0px;
+            text-shadow:2px 2px 4px gray;
+            overflow-x: hidden;
+        }
+        .scarousel {
+            display: flex;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        .book-item {
+            min-width: 150px;
+            margin-right: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow:2px 3px 5px black;
+        }
+        .book-item img {
+            width: 150px;
+            height: 150px;
+            border-radius: 5px;
+        }
+        .book-title {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-size: 16px;
+            color: black;
+            text-shadow:2px 2px 4px gray;
+        }
+        .scroll-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+        .left-btn {
+            left: 10px;
+        }
+        .right-btn {
+            right: 10px;
+        }
+        .scroll-btn:hover {
+            background-color: rgba(0,0,0,0.7);
+        }
+        .book-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }

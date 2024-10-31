@@ -1,0 +1,88 @@
+
+.main {
+    font-family: Arial, sans-serif;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-top: 40px;
+}
+body{
+	background-image: url('https://ic.softlinkint.com/wp-content/uploads/2023/11/digital-physical-library.jpg');
+}
+.container {
+    display: flex;
+    width: 500px;
+    height: 300px;
+    
+    
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+.box {
+    padding: 10px;
+    width: 60%;
+}
+.box-left {
+    border-right: 1px solid #f0f0f0;
+     background: rgba(255, 255, 255, 0.2); /* Light transparent background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    backdrop-filter: blur(10px); /* Blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Blur effect for Safari */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
+   /* Text color */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    
+}
+.box-right {
+    border-left: 1px solid #f0f0f0;
+    background: linear-gradient(rgb(45, 210, 133),rgb(17, 187, 184));
+    color: white;
+    width: 200px;
+    border-radius: 0px 15px 15px 0px;
+}
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.input-group {
+    margin-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 50px;
+    
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px grey;
+}
+.button-group {
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: bottom;
+    margin-top: 40px;
+    
+    
+}
+.button-group button,#submit {
+    padding: 10px 20px;
+    background: linear-gradient(rgb(25, 65, 224),rgb(31, 212, 212));
+    border: none;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+    width: 150px;
+    box-shadow: 2px 2px 5px grey,
+                3px 3px 6px black ;
+}
+.button-group button:hover {
+    background-color: #0056b3;
+}
+
+
